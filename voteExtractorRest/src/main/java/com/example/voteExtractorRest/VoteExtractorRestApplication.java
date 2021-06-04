@@ -8,6 +8,7 @@ public class VoteExtractorRestApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(VoteExtractorRestApplication.class, args);
+		r
 	}
 
 }
