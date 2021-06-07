@@ -1,10 +1,11 @@
-package com.example.voteExtractor.dao;
+package com.example.voteExtractorRest.dao;
 
-import com.example.voteExtractor.modelos.Usuario;
+import com.example.voteExtractorRest.modelos.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -15,8 +16,8 @@ public interface UsuariosDao extends JpaRepository<Usuario, Integer> {
 
     //para comprobar que al registrar no se repita el nombre de usuario
     Optional<Usuario> findByUser (@Param("user") String user);
-    //para obtener los usuarios de un determinado rol, en nuestro caso nos servirá para obtener los del rol 1, para hacer el crud
-    Optional<Usuario> findByRol (@Param("rol") String user);
+    //para obtener los usuarios de un determinado rol, en nuestro caso nos servirï¿½ para obtener los del rol 1, para hacer el crud
+    List<Usuario> findByRol (@Param("rol") int rol);
     
 
 }

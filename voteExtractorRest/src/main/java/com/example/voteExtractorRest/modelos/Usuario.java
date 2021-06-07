@@ -1,4 +1,4 @@
-package com.example.voteExtractor.modelos;
+package com.example.voteExtractorRest.modelos;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
@@ -45,12 +45,12 @@ public class Usuario {
         this.user = user;
     }
 
-    public String getPsw() {
+    public String getCpasw() {
         return psw;
     }
 
-    public void setPsw(String psw) {
-        this.psw = psw;
+    public void setCpasw(String cpasw) {
+        this.cpasw = cpasw;
     }
 
 
@@ -62,12 +62,12 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public int getRol() {
+        return rol;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRol(int rol) {
+        this.rol = rol;
     }
 
     public String getPsw() {
@@ -81,6 +81,6 @@ public class Usuario {
     @Override
     public String toString() {
         return String.format(
-                "Usuario[id=%d,user='%s'psw='%s',cpsw='%s',rol=%d,",id,user,psw,cpsw,rol);
+                "Usuario[id=%d,user='%s'psw='%s',cpsw='%s',rol=%d,",id,user,psw,cpasw,rol);
     }
 }
